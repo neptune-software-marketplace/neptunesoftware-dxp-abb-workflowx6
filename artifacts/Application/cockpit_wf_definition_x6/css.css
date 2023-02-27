@@ -1,0 +1,12 @@
+.canvasContainer {
+    height: 90vh;
+}
+
+#graphCanvas, #stencilCanvas {
+    height: 100% !important;
+}
+
+.panelStencil {
+    border-right: 4px solid #919191;
+}
+

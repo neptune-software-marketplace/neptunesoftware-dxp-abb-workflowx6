@@ -1,0 +1,49 @@
+{
+	"id": "11e5dbae-63e2-4a15-8a45-b7012252dd48",
+	"createdAt": "2023-02-27T11:32:55.956Z",
+	"createdBy": "kristin.eliassen@neptune-software.com",
+	"git": {
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-workflowx6"
+	},
+	"name": "workflow_x6",
+	"description": null,
+	"ver": "23.2.27.1233",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "27843ff2-6ed2-4048-f383-a63b859f56ae",
+			"application": "cockpit_wf_definition_x6",
+			"title": "",
+			"description": "Workflow definition"
+		}
+	],
+	"api": [],
+	"odataSource": [],
+	"odataMock": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"department": [],
+	"script_scheduler": [],
+	"wf_definition": [],
+	"connector": [],
+	"events": [],
+	"media_library": [],
+	"code_snippets": [],
+	"wf_determination": [],
+	"wf_taskaction": []
+}
