@@ -1,5 +1,5 @@
 const nodeConfigMap = {
-    'Start': { shape: "custom-start", data: { action: "start" }, color: "green", showLabel: false },
+    Start: { shape: "custom-start", data: { action: "start" }, color: "green", showLabel: false },
     "User Task": {
         shape: "custom-task",
         data: { action: "userTask" },
@@ -12,43 +12,43 @@ const nodeConfigMap = {
         color: "red",
         showLabel: true,
     },
-    'Approve': {
+    Approve: {
         shape: "custom-userAction",
         data: { action: "userAction-approve" },
         color: "green",
         showLabel: false,
     },
-    'Reject': {
+    Reject: {
         shape: "custom-userAction",
         data: { action: "userAction-reject" },
         color: "red",
         showLabel: false,
     },
-    'Save': {
+    Save: {
         shape: "custom-userAction",
         data: { action: "userAction-save" },
         color: "black",
         showLabel: false,
     },
-    'False': {
+    False: {
         shape: "custom-scriptAction",
         data: { action: "scriptAction-false" },
         color: "red",
         showLabel: false,
     },
-    'True': {
+    True: {
         shape: "custom-scriptAction",
         data: { action: "scriptAction-true" },
         color: "green",
         showLabel: false,
     },
-    'Cancel': {
+    Cancel: {
         shape: "custom-event",
         data: { action: "event-cancel" },
         color: "red",
         showLabel: false,
     },
-    'Completed': {
+    Completed: {
         shape: "custom-event",
         data: { action: "event-cancel" },
         color: "green",
@@ -76,7 +76,7 @@ const formatToX6 = (workflow) => {
         } else {
             data = {
                 ...config.data,
-                ...object
+                ...object,
             };
         }
 

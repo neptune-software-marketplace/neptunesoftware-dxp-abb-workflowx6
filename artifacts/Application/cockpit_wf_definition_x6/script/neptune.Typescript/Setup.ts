@@ -13,9 +13,9 @@ graph = new Graph({
         router: {
             name: "manhattan",
             args: {
-                startDirections: ['bottom'],
-                endDirections: ['top']
-            }
+                startDirections: ["bottom"],
+                endDirections: ["top"],
+            },
         },
         connector: {
             name: "rounded",
@@ -63,7 +63,7 @@ const ports = {
                     style: {
                         visibility: "hidden",
                     },
-                }
+                },
             },
         },
         out: {
@@ -76,7 +76,7 @@ const ports = {
                     style: {
                         visibility: "hidden",
                     },
-                }
+                },
             },
         },
     },
@@ -169,12 +169,12 @@ Graph.registerNode(
                 refPoints: "0,15 10,5 20,15",
             },
             label: {
-                refY: '90%',
-                textVerticalAnchor: 'bottom',
+                refY: "90%",
+                textVerticalAnchor: "bottom",
                 fontSize: 12,
             },
         },
-        ports: { ...ports, items: [{id: 'in-port', group: 'in'}] },
+        ports: { ...ports, items: [{ id: "in-port", group: "in" }] },
     },
     true
 );
@@ -190,9 +190,9 @@ Graph.registerNode(
                 strokeWidth: 2,
                 stroke: "red",
                 refPoints: "20,10 10,15 0,10",
-            }
+            },
         },
-        ports: { ...ports, items: [{id: 'out-port', group: 'out'}] },
+        ports: { ...ports, items: [{ id: "out-port", group: "out" }] },
     },
     true
 );
@@ -213,8 +213,8 @@ const stencil = new Addon.Stencil({
             title: "UserAction",
             graphHeight: 220,
             layoutOptions: {
-                rowHeight: 100
-            }
+                rowHeight: 100,
+            },
         },
         {
             name: "scriptaction",
@@ -232,52 +232,77 @@ document.getElementById("stencilCanvas").appendChild(stencil.container);
 const task1 = graph.createNode({
     shape: "custom-task",
     label: "Script Task",
-    data: { group: "task", action: "scriptTask", name: 'Script Task', templateName: 'Script Task' },
+    data: { group: "task", action: "scriptTask", name: "Script Task", templateName: "Script Task" },
 });
 const task2 = graph.createNode({
     shape: "custom-task",
     label: "User Task",
     attrs: { body: { stroke: "green" } },
-    data: { group: "task", action: "userTask", name: 'User Task', templateName: 'User Task' },
+    data: { group: "task", action: "userTask", name: "User Task", templateName: "User Task" },
 });
 const userAction1 = graph.createNode({
     shape: "custom-userAction",
     label: "Approve",
     attrs: { body: { stroke: "green" } },
-    data: { group: "useraction", action: "userAction-approve", name: 'Approve', templateName: 'Approve' },
+    data: {
+        group: "useraction",
+        action: "userAction-approve",
+        name: "Approve",
+        templateName: "Approve",
+    },
 });
 const userAction2 = graph.createNode({
     shape: "custom-userAction",
     label: "Reject",
-    data: { group: "useraction", action: "userAction-reject", name: 'Reject', templateName: 'Reject' },
+    data: {
+        group: "useraction",
+        action: "userAction-reject",
+        name: "Reject",
+        templateName: "Reject",
+    },
 });
 const userAction3 = graph.createNode({
     shape: "custom-userAction",
     label: "Save",
     attrs: { body: { stroke: "black" } },
-    data: { group: "useraction", action: "userAction-save", name: 'Save', templateName: 'Save' },
+    data: { group: "useraction", action: "userAction-save", name: "Save", templateName: "Save" },
 });
 const scriptAction1 = graph.createNode({
     shape: "custom-scriptAction",
     label: "False",
-    data: { group: "scriptaction", action: "scriptAction-false", name: 'False', templateName: 'False' },
+    data: {
+        group: "scriptaction",
+        action: "scriptAction-false",
+        name: "False",
+        templateName: "False",
+    },
 });
 const scriptAction2 = graph.createNode({
     shape: "custom-scriptAction",
     label: "True",
     attrs: { body: { stroke: "green" } },
-    data: { group: "scriptaction", action: "scriptAction-false", name: 'True', templateName: 'True' },
+    data: {
+        group: "scriptaction",
+        action: "scriptAction-false",
+        name: "True",
+        templateName: "True",
+    },
 });
 const event1 = graph.createNode({
     shape: "custom-event",
     label: "Cancel",
-    data: { group: "event", action: "event-cancel", name: 'Cancel', templateName: 'Cancel' },
+    data: { group: "event", action: "event-cancel", name: "Cancel", templateName: "Cancel" },
 });
 const event2 = graph.createNode({
     shape: "custom-event",
     label: "Completed",
     attrs: { body: { stroke: "green" } },
-    data: {  group: "event", action: "event-completed", name: 'Completed', templateName: 'Completed' },
+    data: {
+        group: "event",
+        action: "event-completed",
+        name: "Completed",
+        templateName: "Completed",
+    },
 });
 
 stencil.load([task1, task2], "task");
@@ -286,13 +311,13 @@ stencil.load([scriptAction1, scriptAction2], "scriptaction");
 stencil.load([event1, event2], "event");
 
 const startNode = graph.createNode({
-    shape: 'custom-start',
+    shape: "custom-start",
     attrs: { body: { stroke: "green" } },
     position: {
         x: 500,
-        y: 100
+        y: 100,
     },
-    data: { dataType: 'start', action: "start", name: 'Start', templateName: 'Start' },
+    data: { dataType: "start", action: "start", name: "Start", templateName: "Start" },
 });
 
 graph.addNode(startNode);

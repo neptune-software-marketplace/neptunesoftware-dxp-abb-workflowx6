@@ -54,7 +54,7 @@
 							"data": [
 								{
 									"fieldNo": "17f2d3eb-42ce-4a84-f056-e616d9992958",
-									"fieldName": "oBtnLogJSON",
+									"fieldName": "btnLogJSON",
 									"fieldParent": "481d1817-cfc9-4128-9713-33b012ca8add",
 									"fieldType": "sap.m.Button",
 									"script": "",
@@ -80,7 +80,7 @@
 											"attribute": "press",
 											"grouping": "Events",
 											"value": "Anonymous Function",
-											"script": "file://event/sap.m.Button/oBtnLogJSON/press.js",
+											"script": "file://event/sap.m.Button/btnLogJSON/press.js",
 											"language": "javascript",
 											"translation": []
 										}
@@ -89,7 +89,7 @@
 								},
 								{
 									"fieldNo": "36180d83-c1e2-4857-8a68-19a310973f23",
-									"fieldName": "oButtonClear",
+									"fieldName": "btnClear",
 									"fieldParent": "481d1817-cfc9-4128-9713-33b012ca8add",
 									"fieldType": "sap.m.Button",
 									"script": "",
@@ -128,7 +128,7 @@
 								},
 								{
 									"fieldNo": "ce5aea4e-38fc-4deb-82f0-59f4c2b4ba93",
-									"fieldName": "oBtnShowWorkflow",
+									"fieldName": "btnShowWorkflow",
 									"fieldParent": "481d1817-cfc9-4128-9713-33b012ca8add",
 									"fieldType": "sap.m.Button",
 									"script": "",
@@ -148,6 +148,33 @@
 											"grouping": "Events",
 											"value": "displayWorkflow();",
 											"script": "displayWorkflow();",
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "eb0d6d2e-fe21-4e63-a821-542649dca2c6",
+									"fieldName": "btnLayout",
+									"fieldParent": "481d1817-cfc9-4128-9713-33b012ca8add",
+									"fieldType": "sap.m.Button",
+									"script": "",
+									"customComponent": false,
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "text",
+											"grouping": "Properties",
+											"value": "Add layout",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "press",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": "file://event/sap.m.Button/btnLayout/press.script",
 											"translation": []
 										}
 									],
@@ -1197,8 +1224,8 @@
 					"fieldNo": "24215377-c6b6-44f2-a738-1f11e45a77fb",
 					"fieldName": "DummyData",
 					"fieldParent": 99999,
-					"fieldType": "neptune.Script",
-					"script": "file://script/neptune.Script/DummyData.js",
+					"fieldType": "neptune.Typescript",
+					"script": "file://script/neptune.Typescript/DummyData.ts",
 					"customComponent": false,
 					"request": [],
 					"response": [],
@@ -1304,7 +1331,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "23.2.27.1233",
+	"ver": "23.2.27.1557",
 	"application": "cockpit_wf_definition_x6",
 	"title": "",
 	"description": "Workflow definition",
@@ -1330,7 +1357,7 @@
 	"cus_theme": "",
 	"css": "file:///css.css",
 	"compiledCss": "file://script/undefined/undefined.script",
-	"header": "<script src=\"https://cdn.jsdelivr.net/npm/@antv/x6/dist/x6.js\"></script>",
+	"header": "file:///header.html",
 	"manifest": "",
 	"globalScript": null,
 	"deleted": false,
