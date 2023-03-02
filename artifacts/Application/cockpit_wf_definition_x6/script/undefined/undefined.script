@@ -2,10 +2,47 @@
   height: 90vh;
 }
 
-#graphCanvas, #stencilCanvas {
+#graphCanvas,
+#stencilCanvas {
   height: 100% !important;
 }
 
 .panelStencil {
   border-right: 4px solid #919191;
+}
+
+.border-red,
+.border-green,
+.border-black {
+  stroke-width: 2px;
+}
+
+.border-red {
+  stroke: red;
+}
+
+.border-green {
+  stroke: green;
+}
+
+.border-black {
+  stroke: black;
+}
+
+.border-dashed {
+  stroke-dasharray: 4;
+}
+
+.nodeLabel {
+  font-size: 12px;
+  fill: #262626;
+}
+
+.port-in {
+  /*     fill: pink; */
+}
+
+.port-out {
+  /*     fill: orange;
+  r: 15; */
 }

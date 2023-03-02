@@ -1,56 +1,47 @@
 const nodeConfigMap = {
-    Start: { shape: "custom-start", data: { action: "start" }, color: "green", showLabel: false },
+    Start: { shape: "custom-start", color: "green", showLabel: false },
     "User Task": {
         shape: "custom-task",
-        data: { action: "userTask" },
         color: "green",
         showLabel: true,
     },
     "Script Task": {
         shape: "custom-task",
-        data: { action: "scriptTask" },
         color: "red",
         showLabel: true,
     },
     Approve: {
         shape: "custom-userAction",
-        data: { action: "userAction-approve" },
         color: "green",
         showLabel: false,
     },
     Reject: {
         shape: "custom-userAction",
-        data: { action: "userAction-reject" },
         color: "red",
         showLabel: false,
     },
     Save: {
         shape: "custom-userAction",
-        data: { action: "userAction-save" },
         color: "black",
         showLabel: false,
     },
     False: {
         shape: "custom-scriptAction",
-        data: { action: "scriptAction-false" },
         color: "red",
         showLabel: false,
     },
     True: {
         shape: "custom-scriptAction",
-        data: { action: "scriptAction-true" },
         color: "green",
         showLabel: false,
     },
     Cancel: {
         shape: "custom-event",
-        data: { action: "event-cancel" },
         color: "red",
         showLabel: false,
     },
     Completed: {
         shape: "custom-event",
-        data: { action: "event-cancel" },
         color: "green",
         showLabel: false,
     },
@@ -60,34 +51,44 @@ const formatToX6 = (workflow) => {
     const formattedNodes = [];
     const formattedEdges = [];
 
-    workflow.flowEditor.objects.forEach((object) => {
-        const config = nodeConfigMap[object.templateName];
+    workflow.flowEditor.objects.forEach((element) => {
+        const config = nodeConfigMap[element.templateName];
 
-        const taskActionData = workflow.tasks.find((task) => task.id === object.id);
+        const taskActionData = workflow.tasks.find((task) => task.id === element.id);
         let data;
 
         if (taskActionData) {
             data = {
                 ...config.data,
-                ...taskActionData,
-                templateName: object.templateName,
-                name: taskActionData.title,
+                templateName: element.templateName,
             };
         } else {
             data = {
                 ...config.data,
-                ...object,
+                ...element,
             };
         }
 
+        const taskMarkup = [
+                {
+                    tagName: "rect",
+                    selector: "body",
+                },
+                {
+                    tagName: "text",
+                    selector: "text",
+                    className: 'nodeLabel'
+                },
+            ];
+
         const node = graph.createNode({
-            id: object.id,
+            id: element.id,
             shape: config.shape,
-            label: config.showLabel ? object.name : "",
+            label: config.showLabel ? element.name : "",
             data,
             position: {
-                x: object.posX - 100,
-                y: object.posY,
+                x: element.posX - 100,
+                y: element.posY,
             },
             attrs: {
                 body: {
@@ -95,6 +96,10 @@ const formatToX6 = (workflow) => {
                 },
             },
         });
+
+        if (config.shape === 'custom-task') {
+            node.setMarkup(taskMarkup)
+        }
 
         formattedNodes.push(node);
     });
@@ -115,6 +120,5 @@ const formatToX6 = (workflow) => {
         formattedEdges.push(edge);
     });
 
-    const cells = [...formattedNodes, ...formattedEdges];
-    return cells;
+    return [...formattedNodes, ...formattedEdges];
 };

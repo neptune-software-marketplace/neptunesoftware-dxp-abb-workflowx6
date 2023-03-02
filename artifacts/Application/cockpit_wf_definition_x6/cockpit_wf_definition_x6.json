@@ -152,33 +152,6 @@
 										}
 									],
 									"data": []
-								},
-								{
-									"fieldNo": "eb0d6d2e-fe21-4e63-a821-542649dca2c6",
-									"fieldName": "btnLayout",
-									"fieldParent": "481d1817-cfc9-4128-9713-33b012ca8add",
-									"fieldType": "sap.m.Button",
-									"script": "",
-									"customComponent": false,
-									"request": [],
-									"response": [],
-									"attributes": [
-										{
-											"attribute": "text",
-											"grouping": "Properties",
-											"value": "Add layout",
-											"script": "",
-											"translation": []
-										},
-										{
-											"attribute": "press",
-											"grouping": "Events",
-											"value": "Anonymous Function",
-											"script": "file://event/sap.m.Button/btnLayout/press.script",
-											"translation": []
-										}
-									],
-									"data": []
 								}
 							]
 						},
@@ -1221,59 +1194,126 @@
 			"fieldNo": 99999,
 			"data": [
 				{
-					"fieldNo": "24215377-c6b6-44f2-a738-1f11e45a77fb",
-					"fieldName": "DummyData",
-					"fieldParent": 99999,
-					"fieldType": "neptune.Typescript",
-					"script": "file://script/neptune.Typescript/DummyData.ts",
-					"customComponent": false,
-					"request": [],
-					"response": [],
-					"attributes": [],
-					"data": []
-				},
-				{
-					"fieldNo": "e08967c1-867e-40f6-d2f7-07e73a25d91f",
-					"fieldName": "WorkflowData",
-					"fieldParent": 99999,
-					"fieldType": "neptune.model",
-					"script": "",
-					"customComponent": false,
-					"bindingValue": "Generic Array",
-					"bindingType": "h",
-					"bindingSource": "P9",
-					"request": [],
-					"response": [],
-					"attributes": [],
-					"data": []
-				},
-				{
-					"fieldNo": "4fd82c8c-663d-48d4-b724-fce7db7b6c31",
-					"fieldName": "SelectedNodeData",
-					"fieldParent": 99999,
-					"fieldType": "neptune.model",
-					"script": "",
-					"customComponent": false,
-					"bindingValue": "Generic Array",
-					"bindingType": "h",
-					"bindingSource": "P9",
-					"dataModel": {},
-					"request": [],
-					"response": [],
-					"attributes": [],
-					"data": []
-				},
-				{
 					"fieldNo": "5486e571-a2e5-4e5b-9cef-b8367304023c",
 					"fieldName": "Init",
 					"fieldParent": 99999,
 					"fieldType": "neptune.Typescript",
 					"script": "file://script/neptune.Typescript/Init.ts",
 					"customComponent": false,
+					"disabled": true,
 					"request": [],
 					"response": [],
 					"attributes": [],
 					"data": []
+				},
+				{
+					"fieldNo": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+					"fieldName": "Components",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "5c9e633c-4a42-447e-9715-ece442e03df2",
+							"fieldName": "Graph",
+							"fieldParent": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Components/Graph.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "ac6876f6-fd6b-4c72-c49c-a2793f0fbf8e",
+							"fieldName": "Ports",
+							"fieldParent": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Components/Ports.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "dc58e1cb-1077-4ed1-d852-81f41eecdccf",
+							"fieldName": "TaskNode",
+							"fieldParent": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Components/TaskNode.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "d3c11d22-dce5-44e3-c856-ab7e898ae779",
+							"fieldName": "UserActionNode",
+							"fieldParent": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Components/UserActionNode.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "b1344f91-c9fe-42bd-8119-242df1c263b4",
+							"fieldName": "ScriptActionNode",
+							"fieldParent": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Components/ScriptActionNode.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "5cb9c558-0237-4b2e-8307-4287c42de042",
+							"fieldName": "EventNode",
+							"fieldParent": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Components/EventNode.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "9ec6b8cf-bffb-4c19-ebe0-f0a1038a9095",
+							"fieldName": "StartNode",
+							"fieldParent": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Components/StartNode.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "db8aeac0-4a7d-4917-da18-50aa18f3e7b4",
+							"fieldName": "Stencil",
+							"fieldParent": "356a4ce1-f5c0-4172-e6e3-33146b0d0fd2",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Components/Stencil.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
 				},
 				{
 					"fieldNo": "8b113d84-056f-4c46-8b03-a350ad063954",
@@ -1286,6 +1326,74 @@
 					"response": [],
 					"attributes": [],
 					"data": []
+				},
+				{
+					"fieldNo": "485bf844-8316-42b4-8a0d-57259a759c82",
+					"fieldName": "Functions",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				},
+				{
+					"fieldNo": "05d0e5a3-f71a-4948-bdfa-8d66ec953b90",
+					"fieldName": "Data",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"customComponent": false,
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "e08967c1-867e-40f6-d2f7-07e73a25d91f",
+							"fieldName": "Workflow",
+							"fieldParent": "05d0e5a3-f71a-4948-bdfa-8d66ec953b90",
+							"fieldType": "neptune.model",
+							"script": "",
+							"customComponent": false,
+							"bindingValue": "Generic Array",
+							"bindingType": "h",
+							"bindingSource": "P9",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "4fd82c8c-663d-48d4-b724-fce7db7b6c31",
+							"fieldName": "SelectedNode",
+							"fieldParent": "05d0e5a3-f71a-4948-bdfa-8d66ec953b90",
+							"fieldType": "neptune.model",
+							"script": "",
+							"customComponent": false,
+							"bindingValue": "Generic Array",
+							"bindingType": "h",
+							"bindingSource": "P9",
+							"dataModel": {},
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "24215377-c6b6-44f2-a738-1f11e45a77fb",
+							"fieldName": "DummyData",
+							"fieldParent": "05d0e5a3-f71a-4948-bdfa-8d66ec953b90",
+							"fieldType": "neptune.Typescript",
+							"script": "file://script/neptune.Typescript/Data/DummyData.ts",
+							"customComponent": false,
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
 				},
 				{
 					"fieldNo": "da27ddce-a59e-4ead-e0e4-05cf0687c9a7",
@@ -1331,7 +1439,7 @@
 		}
 	],
 	"componentInterface": [],
-	"ver": "23.2.27.1557",
+	"ver": "23.3.2.915",
 	"application": "cockpit_wf_definition_x6",
 	"title": "",
 	"description": "Workflow definition",
@@ -1357,7 +1465,7 @@
 	"cus_theme": "",
 	"css": "file:///css.css",
 	"compiledCss": "file://script/undefined/undefined.script",
-	"header": "file:///header.html",
+	"header": "<script src=\"https://cdn.jsdelivr.net/npm/@antv/x6/dist/x6.js\"></script>",
 	"manifest": "",
 	"globalScript": null,
 	"deleted": false,
